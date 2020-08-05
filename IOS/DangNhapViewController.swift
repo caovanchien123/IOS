@@ -10,21 +10,36 @@ import UIKit
 
 class DangNhapViewController: UIViewController {
 
+    @IBOutlet weak var edt_TaiKhoan: UITextField!
+    @IBOutlet weak var edt_MatKhau: UITextField!
+    //khai bao db
+    let db = UserDB()
+    
+    @IBAction func DangNhapAction(_ sender: Any) {
+        let user = db.checkLogin(s_TaiKhoan: edt_TaiKhoan.text ?? "", s_MatKhau: edt_MatKhau.text ?? "")
+        if user == nil {
+            print("Khong tim thay thong tin tai khoan")
+            Toast("Tài khoản hoặc mật khẩu không chính xác").show(self)
+        }else{
+            chuyenManHinh()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func chuyenManHinh() {
+        let src = (storyboard?.instantiateViewController(withIdentifier: "src_Main"))!
+        self.present(src, animated: true, completion: nil)
     }
-    */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let viewController = segue.destination as? ViewController else {
+            return
+        }
+        
+        viewController.b_TrangThai = true
+        viewController.user = db.checkLogin(s_TaiKhoan: edt_TaiKhoan.text ?? "", s_MatKhau: edt_MatKhau.text ?? "")
+    }
 }

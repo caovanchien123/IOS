@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import os.log
 
-class MyDatabaseAccess {
+class UserDB {
     let dPath:String
     let DB_NAME: String = "Story.sqlite"
     let db: FMDatabase?
@@ -112,5 +112,36 @@ class MyDatabaseAccess {
         } else {
             os_log("Database is nil")
         }
+    }
+    
+    func checkLogin(s_TaiKhoan: String, s_MatKhau: String) -> User? {
+        if db != nil {
+            var results: FMResultSet?
+            let sql = "SELECT * FROM \(TABLE_NAME)"
+            do {
+                results = try db?.executeQuery(sql, values: nil)
+            }
+            catch{
+                print("fail to read data:  \(error.localizedDescription)")
+            }
+            if results != nil {
+                while (results?.next())! {
+                    let userName = results!.string(forColumn: USER_NAME) ?? ""
+                    let userAccount = results!.string(forColumn: USER_ACCOUNT) ?? ""
+                    let userPass = results!.string(forColumn: USER_PASS) ?? ""
+                    let userAge = results!.string(forColumn: USER_AGE) ?? ""
+                    let string = results!.string(forColumn: USER_IMAGE)
+                    let img_Avata: Data = Data(base64Encoded: string!, options: .ignoreUnknownCharacters)!
+                    let userAvata = UIImage(data: img_Avata)
+                    let user = User(s_TaiKhoan: userAccount, s_MatKhau: userPass, s_HoTen: userName, s_Tuoi: userAge, img_Avata: userAvata)
+                    if userPass == s_MatKhau && userAccount == s_TaiKhoan {
+                        return user
+                    }
+                }
+            }
+        } else {
+            os_log("Database is nil")
+        }
+        return nil
     }
 }

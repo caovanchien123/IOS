@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SSn-Jd-vwf">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
         <scene sceneID="gMf-uW-IOS">
             <objects>
                 <viewController id="SSn-Jd-vwf" customClass="DangNhapViewController" customModule="IOS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pJE-Pv-1nh">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="scr_DangNhap" id="pJE-Pv-1nh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -49,6 +49,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlO-q9-Lyw">
                                                 <rect key="frame" x="152.5" y="0.0" width="221.5" height="30"/>
                                                 <state key="normal" title="Đăng nhập"/>
+                                                <connections>
+                                                    <action selector="DangNhapAction:" destination="SSn-Jd-vwf" eventType="touchUpInside" id="g0y-Td-CHX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -63,6 +66,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kpm-xn-Yhv"/>
                     </view>
+                    <connections>
+                        <outlet property="edt_MatKhau" destination="8z1-r3-Kh7" id="8rW-np-cnn"/>
+                        <outlet property="edt_TaiKhoan" destination="kgD-xM-VbF" id="l7N-uS-oRL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ci9-Sf-xnU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,7 +78,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="src_Main" id="BYZ-38-t0r" customClass="ViewController" customModule="IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,6 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-43" y="110"/>
         </scene>
     </scenes>
 </document>

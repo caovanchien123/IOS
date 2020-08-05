@@ -10,11 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //Khai bao bien
+    var b_TrangThai = false
+    var user: User?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indentifier = segue.identifier {
+            switch indentifier {
+            case "DangNhap":
+                var a = 1
+                
+            default:
+                print("Loi Roi Em")
+            }
+        }
+    }
 
 }
 

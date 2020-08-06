@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DanhSachController: UIViewController, UITableView {
+class DanhSachController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

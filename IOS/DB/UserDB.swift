@@ -12,7 +12,7 @@ import os.log
 
 class UserDB {
     let dPath:String
-    let DB_NAME: String = "Story.sqlite"
+    let DB_NAME: String = "Lon.sqlite"
     let db: FMDatabase?
     
     let TABLE_NAME: String = "user"
@@ -39,7 +39,8 @@ class UserDB {
     func createTable() -> Bool {
         var ok: Bool = false
         if db != nil {
-            let sql = "CREATE TABLE " + TABLE_NAME + "( " + TABLE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + USER_NAME + " TEXT, " + USER_ACCOUNT + " TEXT, " + USER_PASS + " TEXT, " + USER_AGE + " TEXT, " + USER_IMAGE + " TEXT)"
+            let sql = "CREATE TABLE " + TABLE_NAME + " ( " + TABLE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + USER_NAME + " TEXT, " + USER_ACCOUNT + " TEXT, " + USER_PASS + " TEXT, " + USER_AGE + " TEXT, " + USER_IMAGE + " TEXT)"
+            print(sql)
             if db!.executeStatements(sql) {
                 ok = true
                 os_log("Table is created")
@@ -75,7 +76,7 @@ class UserDB {
         if db != nil {
             let imageData: NSData = user.img_Avata!.pngData()! as NSData
             let userImageString = imageData.base64EncodedData(options: .lineLength64Characters)
-            let sql = "INSERT INTO " + TABLE_NAME + "(" + USER_NAME + ", " + USER_ACCOUNT + ", " + USER_PASS + ", " + USER_AGE + ", " + USER_IMAGE + ")" + " VALUES (?, ?, ?)"
+            let sql = "INSERT INTO " + TABLE_NAME + "(" + USER_NAME + ", " + USER_ACCOUNT + ", " + USER_PASS + ", " + USER_AGE + ", " + USER_IMAGE + ")" + " VALUES (?, ?, ?, ?, ?)"
             if(db!.executeUpdate(sql, withArgumentsIn: [user.s_HoTen, user.s_TaiKhoan, user.s_MatKhau, user.s_Tuoi, userImageString])){
                 os_log("the meal insert in database")
             }else {
@@ -137,6 +138,7 @@ class UserDB {
                     if userPass == s_MatKhau && userAccount == s_TaiKhoan {
                         return user
                     }
+                    print(userName + "ssss")
                 }
             }
         } else {

@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A827BA1F24DC2D26004BD185 /* DangTruyenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827BA1E24DC2D26004BD185 /* DangTruyenController.swift */; };
+		A827BA2124DC33A5004BD185 /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827BA2024DC33A5004BD185 /* MultilineTextField.swift */; };
+		A827BA2624DC5FD4004BD185 /* ExtensionCustomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827BA2524DC5FD4004BD185 /* ExtensionCustomUI.swift */; };
 		A8B6FC5024DAFD3600A6EA52 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B6FC4F24DAFD3600A6EA52 /* Toast.swift */; };
+		A8B759C424DC14FF00A7FC65 /* DanhSachController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B759C324DC14FF00A7FC65 /* DanhSachController.swift */; };
+		A8D061E324DB80500079D06A /* DangKiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D061E224DB80500079D06A /* DangKiController.swift */; };
 		A8D74B3724DABACA0007CFDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D74B3624DABACA0007CFDB /* AppDelegate.swift */; };
-		A8D74B3924DABACA0007CFDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D74B3824DABACA0007CFDB /* ViewController.swift */; };
+		A8D74B3924DABACA0007CFDB /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D74B3824DABACA0007CFDB /* MainController.swift */; };
 		A8D74B3C24DABACA0007CFDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8D74B3A24DABACA0007CFDB /* Main.storyboard */; };
 		A8D74B3E24DABACB0007CFDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8D74B3D24DABACB0007CFDB /* Assets.xcassets */; };
 		A8D74B4124DABACB0007CFDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8D74B3F24DABACB0007CFDB /* LaunchScreen.storyboard */; };
@@ -21,7 +26,12 @@
 		A8D74B6A24DABD780007CFDB /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D74B6524DABD770007CFDB /* FMDatabaseQueue.m */; };
 		A8D74B6D24DABDC30007CFDB /* UserDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D74B6C24DABDC30007CFDB /* UserDB.swift */; };
 		A8D74B7024DABEAB0007CFDB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D74B6F24DABEAB0007CFDB /* User.swift */; };
-		A8D74B7224DACBAD0007CFDB /* DangNhapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D74B7124DACBAD0007CFDB /* DangNhapViewController.swift */; };
+		A8D74B7224DACBAD0007CFDB /* DangNhapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D74B7124DACBAD0007CFDB /* DangNhapController.swift */; };
+		A8FC921C24DBC94100448B49 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FC921B24DBC94100448B49 /* Config.swift */; };
+		A8FC921E24DBC9BD00448B49 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FC921D24DBC9BD00448B49 /* Story.swift */; };
+		A8FC922024DBCC8100448B49 /* YeuThich.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FC921F24DBCC8100448B49 /* YeuThich.swift */; };
+		A8FC922224DBCD1900448B49 /* DaDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FC922124DBCD1900448B49 /* DaDoc.swift */; };
+		A8FC922424DBCD5F00448B49 /* StoryDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FC922324DBCD5F00448B49 /* StoryDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A827BA1E24DC2D26004BD185 /* DangTruyenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangTruyenController.swift; sourceTree = "<group>"; };
+		A827BA2024DC33A5004BD185 /* MultilineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
+		A827BA2524DC5FD4004BD185 /* ExtensionCustomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCustomUI.swift; sourceTree = "<group>"; };
 		A8B6FC4F24DAFD3600A6EA52 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		A8B759C324DC14FF00A7FC65 /* DanhSachController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanhSachController.swift; sourceTree = "<group>"; };
+		A8D061E224DB80500079D06A /* DangKiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangKiController.swift; sourceTree = "<group>"; };
 		A8D74B3324DABACA0007CFDB /* IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8D74B3624DABACA0007CFDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A8D74B3824DABACA0007CFDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A8D74B3824DABACA0007CFDB /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		A8D74B3B24DABACA0007CFDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8D74B3D24DABACB0007CFDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8D74B4024DABACB0007CFDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,7 +75,12 @@
 		A8D74B6524DABD770007CFDB /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = fmdb/src/fmdb/FMDatabaseQueue.m; sourceTree = SOURCE_ROOT; };
 		A8D74B6C24DABDC30007CFDB /* UserDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDB.swift; sourceTree = "<group>"; };
 		A8D74B6F24DABEAB0007CFDB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A8D74B7124DACBAD0007CFDB /* DangNhapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangNhapViewController.swift; sourceTree = "<group>"; };
+		A8D74B7124DACBAD0007CFDB /* DangNhapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangNhapController.swift; sourceTree = "<group>"; };
+		A8FC921B24DBC94100448B49 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		A8FC921D24DBC9BD00448B49 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		A8FC921F24DBCC8100448B49 /* YeuThich.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeuThich.swift; sourceTree = "<group>"; };
+		A8FC922124DBCD1900448B49 /* DaDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaDoc.swift; sourceTree = "<group>"; };
+		A8FC922324DBCD5F00448B49 /* StoryDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +101,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A827BA2424DC5F5C004BD185 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A8B6FC4F24DAFD3600A6EA52 /* Toast.swift */,
+				A827BA2024DC33A5004BD185 /* MultilineTextField.swift */,
+				A827BA2524DC5FD4004BD185 /* ExtensionCustomUI.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		A8D74B2A24DABACA0007CFDB = {
 			isa = PBXGroup;
 			children = (
@@ -102,17 +132,21 @@
 		A8D74B3524DABACA0007CFDB /* IOS */ = {
 			isa = PBXGroup;
 			children = (
+				A827BA2424DC5F5C004BD185 /* Library */,
 				A8D74B6E24DABE9B0007CFDB /* Model */,
 				A8D74B6B24DABD7E0007CFDB /* DB */,
 				A8D74B5924DABD540007CFDB /* FMDB */,
 				A8D74B3624DABACA0007CFDB /* AppDelegate.swift */,
-				A8D74B3824DABACA0007CFDB /* ViewController.swift */,
+				A8D74B3824DABACA0007CFDB /* MainController.swift */,
 				A8D74B3A24DABACA0007CFDB /* Main.storyboard */,
 				A8D74B3D24DABACB0007CFDB /* Assets.xcassets */,
 				A8D74B3F24DABACB0007CFDB /* LaunchScreen.storyboard */,
 				A8D74B4224DABACB0007CFDB /* Info.plist */,
-				A8D74B7124DACBAD0007CFDB /* DangNhapViewController.swift */,
-				A8B6FC4F24DAFD3600A6EA52 /* Toast.swift */,
+				A8D74B7124DACBAD0007CFDB /* DangNhapController.swift */,
+				A8D061E224DB80500079D06A /* DangKiController.swift */,
+				A8FC921B24DBC94100448B49 /* Config.swift */,
+				A8B759C324DC14FF00A7FC65 /* DanhSachController.swift */,
+				A827BA1E24DC2D26004BD185 /* DangTruyenController.swift */,
 			);
 			path = IOS;
 			sourceTree = "<group>";
@@ -149,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				A8D74B6C24DABDC30007CFDB /* UserDB.swift */,
+				A8FC922324DBCD5F00448B49 /* StoryDB.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -157,6 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				A8D74B6F24DABEAB0007CFDB /* User.swift */,
+				A8FC921D24DBC9BD00448B49 /* Story.swift */,
+				A8FC921F24DBCC8100448B49 /* YeuThich.swift */,
+				A8FC922124DBCD1900448B49 /* DaDoc.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,16 +301,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8FC922424DBCD5F00448B49 /* StoryDB.swift in Sources */,
 				A8D74B6924DABD780007CFDB /* FMResultSet.m in Sources */,
+				A8FC922224DBCD1900448B49 /* DaDoc.swift in Sources */,
 				A8D74B6624DABD780007CFDB /* FMDatabase.m in Sources */,
-				A8D74B3924DABACA0007CFDB /* ViewController.swift in Sources */,
+				A8D74B3924DABACA0007CFDB /* MainController.swift in Sources */,
+				A8FC922024DBCC8100448B49 /* YeuThich.swift in Sources */,
 				A8D74B6A24DABD780007CFDB /* FMDatabaseQueue.m in Sources */,
 				A8D74B6D24DABDC30007CFDB /* UserDB.swift in Sources */,
 				A8D74B7024DABEAB0007CFDB /* User.swift in Sources */,
+				A8FC921C24DBC94100448B49 /* Config.swift in Sources */,
+				A8FC921E24DBC9BD00448B49 /* Story.swift in Sources */,
 				A8D74B6824DABD780007CFDB /* FMDatabasePool.m in Sources */,
-				A8D74B7224DACBAD0007CFDB /* DangNhapViewController.swift in Sources */,
+				A8D061E324DB80500079D06A /* DangKiController.swift in Sources */,
+				A8B759C424DC14FF00A7FC65 /* DanhSachController.swift in Sources */,
+				A8D74B7224DACBAD0007CFDB /* DangNhapController.swift in Sources */,
+				A827BA2624DC5FD4004BD185 /* ExtensionCustomUI.swift in Sources */,
+				A827BA2124DC33A5004BD185 /* MultilineTextField.swift in Sources */,
 				A8B6FC5024DAFD3600A6EA52 /* Toast.swift in Sources */,
 				A8D74B3724DABACA0007CFDB /* AppDelegate.swift in Sources */,
+				A827BA1F24DC2D26004BD185 /* DangTruyenController.swift in Sources */,
 				A8D74B6724DABD780007CFDB /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

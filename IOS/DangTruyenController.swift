@@ -33,8 +33,11 @@ class DangTruyenController: UIViewController, UIImagePickerControllerDelegate, U
             print("da them roi")
             if Config.truyenDB.open() {
                     Config.truyenDB.insert(story: Story(noiDung: content.text, gioiThieu: introduce.text, theLoai: theLoaiArray[category.selectedRow(inComponent: 0)], tacGia: Config.user!.s_HoTen, ten: name.text!, hinh: image.image!))
+                dismiss(animated: true, completion: nil)
                 print("da them roi")
             }
+        }else{
+            Toast("Chưa nhập đầy đủ thông tin").show(self)
         }
     }
     

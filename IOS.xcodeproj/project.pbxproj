@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A82207C224DCC73700672FC3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82207C124DCC73700672FC3 /* CustomTableViewCell.swift */; };
+		A82207C424DCDAC500672FC3 /* DocTruyenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82207C324DCDAC500672FC3 /* DocTruyenController.swift */; };
 		A827BA1F24DC2D26004BD185 /* DangTruyenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827BA1E24DC2D26004BD185 /* DangTruyenController.swift */; };
 		A827BA2124DC33A5004BD185 /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827BA2024DC33A5004BD185 /* MultilineTextField.swift */; };
 		A827BA2624DC5FD4004BD185 /* ExtensionCustomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827BA2524DC5FD4004BD185 /* ExtensionCustomUI.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A82207C124DCC73700672FC3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		A82207C324DCDAC500672FC3 /* DocTruyenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocTruyenController.swift; sourceTree = "<group>"; };
 		A827BA1E24DC2D26004BD185 /* DangTruyenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangTruyenController.swift; sourceTree = "<group>"; };
 		A827BA2024DC33A5004BD185 /* MultilineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
 		A827BA2524DC5FD4004BD185 /* ExtensionCustomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCustomUI.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				A8FC921B24DBC94100448B49 /* Config.swift */,
 				A8B759C324DC14FF00A7FC65 /* DanhSachController.swift */,
 				A827BA1E24DC2D26004BD185 /* DangTruyenController.swift */,
+				A82207C124DCC73700672FC3 /* CustomTableViewCell.swift */,
+				A82207C324DCDAC500672FC3 /* DocTruyenController.swift */,
 			);
 			path = IOS;
 			sourceTree = "<group>";
@@ -303,6 +309,7 @@
 			files = (
 				A8FC922424DBCD5F00448B49 /* StoryDB.swift in Sources */,
 				A8D74B6924DABD780007CFDB /* FMResultSet.m in Sources */,
+				A82207C224DCC73700672FC3 /* CustomTableViewCell.swift in Sources */,
 				A8FC922224DBCD1900448B49 /* DaDoc.swift in Sources */,
 				A8D74B6624DABD780007CFDB /* FMDatabase.m in Sources */,
 				A8D74B3924DABACA0007CFDB /* MainController.swift in Sources */,
@@ -316,6 +323,7 @@
 				A8D061E324DB80500079D06A /* DangKiController.swift in Sources */,
 				A8B759C424DC14FF00A7FC65 /* DanhSachController.swift in Sources */,
 				A8D74B7224DACBAD0007CFDB /* DangNhapController.swift in Sources */,
+				A82207C424DCDAC500672FC3 /* DocTruyenController.swift in Sources */,
 				A827BA2624DC5FD4004BD185 /* ExtensionCustomUI.swift in Sources */,
 				A827BA2124DC33A5004BD185 /* MultilineTextField.swift in Sources */,
 				A8B6FC5024DAFD3600A6EA52 /* Toast.swift in Sources */,

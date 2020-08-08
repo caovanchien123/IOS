@@ -24,6 +24,7 @@ class DangTruyenController: UIViewController, UIImagePickerControllerDelegate, U
         loadCategory()
         load()
     }
+    
     @IBAction func backAction(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
@@ -32,7 +33,7 @@ class DangTruyenController: UIViewController, UIImagePickerControllerDelegate, U
         if checkFrom() && checkImage {
             print("da them roi")
             if Config.truyenDB.open() {
-                    Config.truyenDB.insert(story: Story(noiDung: content.text, gioiThieu: introduce.text, theLoai: theLoaiArray[category.selectedRow(inComponent: 0)], tacGia: Config.user!.s_HoTen, ten: name.text!, hinh: image.image!))
+                Config.truyenDB.insert(story: Story(noiDung: content.text, gioiThieu: introduce.text, theLoai: theLoaiArray[category.selectedRow(inComponent: 0)], tacGia: Config.user!.s_HoTen, ten: name.text!, id: Config.user!.ID!, hinh: image.image!, ID_Story: ""))
                 dismiss(animated: true, completion: nil)
                 print("da them roi")
             }
@@ -48,7 +49,9 @@ class DangTruyenController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     private func load(){
-        
+        content.insertToolbar()
+        introduce.insertToolbar()
+        name.insertToolbar()
     }
        
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

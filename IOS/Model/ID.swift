@@ -8,11 +8,11 @@
 
 import Foundation
 
-class DaDoc {
-    var idTruyen: Int
-    var idUser: Int
+class ID{
+    var idTruyen: String
+    var idUser: String
     
-    init(idTruyen:Int, idUser:Int) {
+    init(idTruyen:String, idUser:String) {
         self.idTruyen = idTruyen
         self.idUser = idUser
     }

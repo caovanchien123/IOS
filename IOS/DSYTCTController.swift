@@ -1,20 +1,26 @@
 //
-//  DanhSachController.swift
+//  YeuThichController.swift
 //  IOS
 //
-//  Created by x_x on 8/6/20.
+//  Created by x_x on 8/7/20.
 //  Copyright © 2020 x_x. All rights reserved.
 //
 
 import UIKit
 
-class DanhSachController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DSYTCTController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    enum NavigationDirection {
+        case cuatoi
+        case yeuthich
+    }
+    var navigrationDirection:NavigationDirection = .yeuthich
     
     var arrTruyen = [Story]()
     @IBOutlet weak var tabelView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return arrTruyen.count
+        return arrTruyen.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -26,30 +32,38 @@ class DanhSachController: UIViewController, UITableViewDelegate, UITableViewData
         cell.txt_TenTruyen.text = "Tên truyện: " + story.ten
         return cell
     }
-   
-    @IBAction func YeuThich(_ sender: Any) {
-        let index = tabelView.indexPathForView(view: sender as! UIButton)?.row;
-        if Config.yeuThich.open() {
-            if Config.yeuThich.check(story: arrTruyen[index!]){
-                Config.yeuThich.insert(dadoc: ID(idTruyen: arrTruyen[index!].ID_Story, idUser: Config.user!.ID!))
-                Toast("Đã thêm vào yêu thích").show(self)
-            }else{
-                Toast("Đã nằm trong yêu thich").show(self)
+    
+    @IBAction func xoa(_ sender: UIButton) {
+        let index = tabelView.indexPathForView(view: sender)!.row;
+        if navigrationDirection == .cuatoi{
+            if Config.truyenDB.open() {
+                Config.truyenDB.delete(story: arrTruyen[index])
+                arrTruyen.remove(at: index)
+                tabelView.deleteRows(at: [tabelView.indexPathForView(view: sender) as! IndexPath], with: .fade)
+            }
+        }else if navigrationDirection == .yeuthich {
+            if Config.yeuThich.open() {
+                Config.yeuThich.delete(dadoc: ID(idTruyen: arrTruyen[index].ID_Story, idUser: Config.user!.ID!))
+                arrTruyen.remove(at: index)
+                tabelView.deleteRows(at: [tabelView.indexPathForView(view: sender) as! IndexPath], with: .fade)
             }
         }
+        Toast("Đã xoá thành công").show(self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        loadApp()
-    }
-    private func loadApp(){
-        if Config.truyenDB.open() {
-            Config.truyenDB.getAllTruyen(storys: &arrTruyen)
-        }
         
+        // Do any additional setup after loading the view.
+        if navigrationDirection == .cuatoi {
+            if Config.truyenDB.open() {
+                Config.truyenDB.getAllTruyenTG(storys: &arrTruyen)
+            }
+        }else if navigrationDirection == .yeuthich {
+            if Config.yeuThich.open() {
+                Config.yeuThich.readMealList(story: &arrTruyen)
+            }
+        }
         tabelView.delegate = self
         tabelView.dataSource = self
     }
@@ -57,7 +71,7 @@ class DanhSachController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func backAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("chuan bi put")
         let data = segue.destination as! UINavigationController

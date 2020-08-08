@@ -38,7 +38,11 @@ class DangNhapController: UIViewController {
         if Config.truyenDB.open() {
             if !Config.isCheckStoryDB {
                 Config.isCheckStoryDB = Config.truyenDB.createTable()
-                dismiss(animated: true, completion: nil)
+            }
+        }
+        if Config.yeuThich.open() {
+            if !Config.isCheckYeuThichDB {
+                Config.isCheckYeuThichDB = Config.yeuThich.createTable()
             }
         }
     }

@@ -14,6 +14,7 @@ class User {
     var s_MatKhau: String
     var s_HoTen: String
     var s_Tuoi: String
+    var ID: String?
     var img_Avata: UIImage?
     
     init(s_TaiKhoan: String, s_MatKhau: String, s_HoTen: String, s_Tuoi: String, img_Avata: UIImage?) {

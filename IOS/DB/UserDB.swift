@@ -12,7 +12,7 @@ import os.log
 
 class UserDB {
     let dPath:String
-    let DB_NAME: String = "Lon.sqlite"
+    let DB_NAME: String = "StoryDB.sqlite"
     let db: FMDatabase?
     
     let TABLE_NAME: String = "user"
@@ -132,13 +132,14 @@ class UserDB {
                     let userPass = results!.string(forColumn: USER_PASS) ?? ""
                     let userAge = results!.string(forColumn: USER_AGE) ?? ""
                     let string = results!.string(forColumn: USER_IMAGE)
+                    let ID = results!.string(forColumn: TABLE_ID)
                     let img_Avata: Data = Data(base64Encoded: string!, options: .ignoreUnknownCharacters)!
                     let userAvata = UIImage(data: img_Avata)
                     let user = User(s_TaiKhoan: userAccount, s_MatKhau: userPass, s_HoTen: userName, s_Tuoi: userAge, img_Avata: userAvata)
+                    user.ID = ID
                     if userPass == s_MatKhau && userAccount == s_TaiKhoan {
                         return user
                     }
-                    print(userName + "ssss")
                 }
             }
         } else {

@@ -22,6 +22,7 @@ class DangKiController: UIViewController, UITextFieldDelegate, UIImagePickerCont
         if checkImage && checkForm() {
             let user = User(s_TaiKhoan: edt_TaiKhoan.text!, s_MatKhau: edt_MatKhau.text!, s_HoTen: edt_HoTen.text!, s_Tuoi: edt_Tuoi.text!, img_Avata: img_Hinh?.image)
             Config.db.insert(user: user)
+            dismiss(animated: true, completion: nil)
         }else{
             Toast("Lỗi tạo tài khoản").show(self)
         }

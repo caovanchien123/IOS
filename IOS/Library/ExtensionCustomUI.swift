@@ -21,6 +21,35 @@ extension UIViewController {
     }
 }
 
+extension UITextField {
+    func insertToolbar() {
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneBtn = UIBarButtonItem(title: "Hoàn thành", style: .done, target: self, action: #selector(UIView.endEditing(_:)))
+        toolbar.setItems([flexSpace, doneBtn], animated: true)
+        toolbar.sizeToFit()
+        inputAccessoryView = toolbar
+    }
+}
+
+extension UITextView {
+    func insertToolbar() {
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneBtn = UIBarButtonItem(title: "Hoàn thành", style: .done, target: self, action: #selector(UIView.endEditing(_:)))
+        toolbar.setItems([flexSpace, doneBtn], animated: true)
+        toolbar.sizeToFit()
+        inputAccessoryView = toolbar
+    }
+}
+
+extension UITableView {
+    func indexPathForView(view: AnyObject) -> NSIndexPath? {
+        let originInTableView = self.convert(CGPoint.zero, from: (view as! UIView))
+        return self.indexPathForRow(at: originInTableView)! as NSIndexPath
+    }
+}
+
 extension UIStackView {
     func addBackground(color: UIColor) {
         let subView = UIView(frame: bounds)

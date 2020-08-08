@@ -13,6 +13,8 @@ class Config {
     static let truyenDB = StoryDB()
     static var isCheckDB = false
     static var isCheckStoryDB = false
+    static var yeuThich = YeuThichDB()
+    static var isCheckYeuThichDB = false
     static var b_TrangThai = false
     static var user: User?
 }

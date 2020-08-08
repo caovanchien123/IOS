@@ -26,4 +26,22 @@ class MainController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let data = segue.destination as? UINavigationController {
+            if let data2 = data.viewControllers[0] as? DSYTCTController {
+                let id = segue.identifier
+                switch id {
+                case "id_YeuThich":
+                    data2.navigrationDirection = .yeuthich
+                case "id_CuaToi":
+                    data2.navigrationDirection = .cuatoi
+                default:
+                    break
+            }
+        }
+        
+        
+    }
+}
+
 }

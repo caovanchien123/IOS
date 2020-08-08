@@ -13,6 +13,8 @@ class DocTruyenController: UIViewController {
     var story: Story?
     @IBOutlet weak var txt_TenTruyen: UITextField!
     @IBOutlet weak var txt_NoiDung: UITextView!
+    @IBOutlet weak var cochu: UITextField!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,5 +26,16 @@ class DocTruyenController: UIViewController {
 
     @IBAction func backAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    @IBAction func coChuAction(_ sender: Any) {
+        if let coChu1 = cochu.text {
+            if coChu1 != "" {
+                var i = 14
+                if let actualNumber = Int(coChu1) {
+                    i = actualNumber
+                }
+                txt_NoiDung.font = .systemFont(ofSize: CGFloat(i))
+            }
+        }
     }
 }

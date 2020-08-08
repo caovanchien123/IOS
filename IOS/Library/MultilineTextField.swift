@@ -186,13 +186,9 @@ public class MultilineTextField: UITextView {
                 self?.placeholderView.textContainer.lineFragmentPadding = textContainer.lineFragmentPadding
             }
         )
-        let subView = UIView(frame: bounds)
-        subView.alpha = 0.2
-        subView.layer.borderWidth = 1.0
-        subView.layer.borderColor = UIColor.black.cgColor
-        subView.layer.cornerRadius = 10
-        subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.insertSubview(subView, at: 1)
+        self.layer.borderWidth = 1.0
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = 10
     }
     
     private func removeObservers() {

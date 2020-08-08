@@ -15,14 +15,18 @@ class Story {
     var theLoai:String
     var tacGia:String
     var ten:String
+    var ID: String
+    var ID_Story: String
     var hinh:UIImage?
     
-    init(noiDung:String, gioiThieu:String, theLoai:String, tacGia:String, ten:String, hinh:UIImage) {
+    init(noiDung:String, gioiThieu:String, theLoai:String, tacGia:String, ten:String, id:String, hinh:UIImage, ID_Story: String) {
         self.noiDung = noiDung
         self.gioiThieu = gioiThieu
         self.theLoai = theLoai
         self.tacGia = tacGia
         self.ten = ten
         self.hinh = hinh
+        self.ID = id
+        self.ID_Story = ID_Story
     }
 }

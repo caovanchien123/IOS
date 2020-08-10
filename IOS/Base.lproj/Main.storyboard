@@ -40,34 +40,34 @@
                                         </connections>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cwl-zj-SEL">
-                                        <rect key="frame" x="0.0" y="394" width="374" height="320"/>
+                                        <rect key="frame" x="0.0" y="394" width="374" height="268"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Họ và tên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="plQ-NU-SAH">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="56"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="45.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên tài khoản" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Whb-fI-aOi">
-                                                <rect key="frame" x="0.0" y="66" width="374" height="56"/>
+                                                <rect key="frame" x="0.0" y="55.5" width="374" height="46"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDN-ld-pfS">
-                                                <rect key="frame" x="0.0" y="132" width="374" height="56"/>
+                                                <rect key="frame" x="0.0" y="111.5" width="374" height="45.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập lại mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HFL-to-QGa">
-                                                <rect key="frame" x="0.0" y="198" width="374" height="56"/>
+                                                <rect key="frame" x="0.0" y="167" width="374" height="45.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tuổi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tjg-SY-cAo">
-                                                <rect key="frame" x="0.0" y="264" width="374" height="56"/>
+                                                <rect key="frame" x="0.0" y="222.5" width="374" height="45.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -75,7 +75,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gX9-1b-9TU">
-                                        <rect key="frame" x="0.0" y="734" width="374" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="682" width="374" height="52"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Đăng kí">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -544,11 +544,19 @@
                         <viewLayoutGuide key="safeArea" id="EOt-kz-3iF"/>
                     </view>
                     <navigationItem key="navigationItem" id="k8e-kF-Ajm">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Trở về" id="uwR-hw-8f2">
                             <connections>
                                 <action selector="backAction:" destination="T27-rh-A2M" id="pwt-4g-EA6"/>
                             </connections>
                         </barButtonItem>
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tất cả truyện" textAlignment="natural" minimumFontSize="17" id="l5O-s1-0Os">
+                            <rect key="frame" x="162.5" y="13.5" width="89" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="pou-BS-UKl" id="6bk-X9-A76"/>
@@ -1005,11 +1013,18 @@
                         <viewLayoutGuide key="safeArea" id="Cso-Av-UYP"/>
                     </view>
                     <navigationItem key="navigationItem" id="wHe-Zu-ZiW">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Trở về" id="quK-mb-S1W">
                             <connections>
                                 <action selector="backAction:" destination="Vng-tR-6Eg" id="xSD-bd-TIO"/>
                             </connections>
                         </barButtonItem>
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Truyện" textAlignment="natural" minimumFontSize="17" id="tow-Rd-THj">
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="pou-BS-UKl" id="5YH-Vz-KZE"/>
@@ -1061,6 +1076,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nVC-Zx-bpw"/>
-        <segue reference="iM2-9w-AuB"/>
+        <segue reference="Mq1-PV-s6E"/>
     </inferredMetricsTieBreakers>
 </document>

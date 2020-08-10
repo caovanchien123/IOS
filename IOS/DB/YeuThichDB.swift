@@ -13,7 +13,7 @@ import os.log
 
 class YeuThichDB {
     let dPath:String
-    let DB_NAME: String = "StoryDB.sqlite"
+    let DB_NAME: String = "StoryDB1.sqlite"
     let db: FMDatabase?
     
     let TABLE_NAME: String = "yeuthich"
